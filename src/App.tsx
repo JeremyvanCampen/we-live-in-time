@@ -50,8 +50,8 @@ function App() {
   }, [targetDate]);
 
   return (
-    <div className="flex items-center flex-col space-y-8 w-full mt-[20vh]">
-      <h1 className="text-5xl">{remainingTime}</h1>
+    <div className="flex items-center flex-col space-y-8 w-full pt-16 px-2">
+      <h1 className="text-4xl">{remainingTime}</h1>
       <img
         className="max-h-96 rounded-lg border-black"
         src={`/days/${totalDays}.jpg`}
