@@ -53,7 +53,7 @@ function App() {
     <div className="flex items-center flex-col space-y-8 w-full mt-[20vh]">
       <h1 className="text-5xl">{remainingTime}</h1>
       <img
-        className="max-h-96"
+        className="max-h-96 rounded-lg border-black"
         src={`/days/${totalDays}.jpg`}
         alt={`Day ${totalDays}`}
       />
