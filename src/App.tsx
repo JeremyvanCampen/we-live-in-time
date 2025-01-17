@@ -36,9 +36,11 @@ function App() {
         const duration = intervalToDuration({ start: zonedNow, end: target });
 
         // Create a readable string displaying the remaining time
-        const formattedTime = `${totalDays}d ${duration.hours}h ${
-          duration.minutes
-        }m ${duration.seconds ? `${duration.seconds}s` : ""}`;
+        const formattedTime = `${totalDays ? `${totalDays}d` : "0d"} ${
+          duration.hours ? `${duration.hours}h` : "0h"
+        } ${duration.minutes ? `${duration.minutes}m` : "0m"} ${
+          duration.seconds ? `${duration.seconds}s` : "0s"
+        }`;
         setRemainingTime(formattedTime);
       }
     };
