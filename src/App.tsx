@@ -56,7 +56,7 @@ function App() {
       <h1 className="text-4xl">{remainingTime}</h1>
       <img
         className="max-h-96 rounded-lg border-black"
-        src={`/days/${totalDays}.jpg`}
+        src={totalDays === 33 ? "/days/33.gif" : `/days/${totalDays}.jpg`}
         alt={`Day ${totalDays}`}
       />
     </div>
