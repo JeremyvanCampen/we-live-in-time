@@ -6,6 +6,11 @@ import {
   intervalToDuration,
 } from "date-fns";
 import { fromZonedTime } from "date-fns-tz"; // Correct import
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
 
 function App() {
   const targetDate = "2025-03-01T10:00:00+01:00"; // Target date in Dutch time (CET/CEST)
@@ -59,6 +64,31 @@ function App() {
         src={totalDays === 33 ? "/days/33.gif" : `/days/${totalDays}.jpg`}
         alt={`Day ${totalDays}`}
       />
+      {/* <Swiper
+        spaceBetween={10}
+        slidesPerView={3}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide>
+          {" "}
+          <img
+            className="max-h-96 rounded-lg border-black"
+            src={totalDays === 33 ? "/days/33.gif" : `/days/${totalDays}.jpg`}
+            alt={`Day ${totalDays}`}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <img
+            className="max-h-96 rounded-lg border-black"
+            src={totalDays === 33 ? "/days/33.gif" : `/days/${totalDays}.jpg`}
+            alt={`Day ${totalDays}`}
+          />
+        </SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+      </Swiper> */}
     </div>
   );
 }
