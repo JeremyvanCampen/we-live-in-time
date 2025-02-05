@@ -294,7 +294,7 @@ function Anniversary() {
         setCurrentQuestion(currentQuestion + 1);
         setUserInput("");
       }
-    }, 100);
+    }, 5000);
   }
 
   function toggleConfettiy() {
