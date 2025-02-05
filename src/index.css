@@ -19,6 +19,8 @@
 
 #root{
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
 }
 
 a {
