@@ -116,12 +116,24 @@ function Home() {
       <div className="flex items-center flex-col space-y-8 w-full pt-16 px-2">
         <h1 className="text-4xl">{remainingTime}</h1>
 
-        <img
-          className="max-h-96 rounded-lg border-black"
-          src={totalDays === 33 ? "/days/33.gif" : `/days/${totalDays}.jpg`}
-          alt={`Day ${totalDays}`}
-          onClick={handleImageClick}
-        />
+        {totalDays === 8 ? (
+          <>
+            <p className="text-center">
+              Schiet eens op met je Photoshop-foto's! Omdat je zo lief bent,
+              maak ik voor vandaag een uitzondering:
+            </p>
+            <audio controls>
+              <source src="/days/8.ogg" type="audio/ogg"></source>
+            </audio>
+          </>
+        ) : (
+          <img
+            className="max-h-96 rounded-lg border-black"
+            src={totalDays === 33 ? "/days/33.gif" : `/days/${totalDays}.jpg`}
+            alt={`Day ${totalDays}`}
+            onClick={handleImageClick}
+          />
+        )}
       </div>
     </>
   );
