@@ -123,7 +123,9 @@ function Home() {
               maak ik voor vandaag een uitzondering:
             </p>
             <audio controls>
-              <source src="/days/8.ogg" type="audio/ogg"></source>
+              <source src="/days/8.ogg" type="audio/ogg" />
+              <source src="/days/8.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
             </audio>
           </>
         ) : (
