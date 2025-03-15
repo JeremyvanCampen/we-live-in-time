@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Home() {
-  const targetDate = "2025-03-01T10:00:00+01:00"; // Target date in Dutch time (CET/CEST)
+  const targetDate = "2025-05-12T06:00:00+01:00"; // Target date in Dutch time (CET/CEST)
 
   const [remainingTime, setRemainingTime] = useState("");
   const [totalDays, setTotalDays] = useState(0);
@@ -116,26 +116,12 @@ function Home() {
       <div className="flex items-center flex-col space-y-8 w-full pt-16 px-2">
         <h1 className="text-4xl">{remainingTime}</h1>
 
-        {totalDays === 8 ? (
-          <>
-            <p className="text-center">
-              Schiet eens op met je Photoshop-foto's! Omdat je zo lief bent,
-              maak ik voor vandaag een uitzondering:
-            </p>
-            <audio controls>
-              <source src="/days/8.ogg" type="audio/ogg" />
-              <source src="/days/8.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </>
-        ) : (
-          <img
-            className="max-h-96 rounded-lg border-black"
-            src={totalDays === 33 ? "/days/33.gif" : `/days/${totalDays}.jpg`}
-            alt={`Day ${totalDays}`}
-            onClick={handleImageClick}
-          />
-        )}
+        <img
+          className="max-h-96 rounded-lg border-black"
+          src={`/days/${totalDays}.jpg`}
+          alt={`Day ${totalDays}`}
+          onClick={handleImageClick}
+        />
       </div>
     </>
   );
