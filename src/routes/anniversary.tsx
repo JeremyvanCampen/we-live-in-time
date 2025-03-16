@@ -62,7 +62,7 @@ function Anniversary() {
       answers: ["Voor", "Na", "Ik denk dat Jeremy dit niet meer exact weet"],
       correctAnswer: 1,
       questionType: QuestionType["Multiple Choice"],
-      image: "/days/43.jpg",
+      image: "/old/43.jpg",
     },
     {
       question: "Wie heeft er vaker gewonnen met Roulette?",
@@ -126,7 +126,7 @@ function Anniversary() {
       answers: ["Steinerbos", "Stammenderbos", "Danikerbos", "Absbroekbos"],
       correctAnswer: 2,
       questionType: QuestionType["Multiple Choice"],
-      image: "/days/35.jpg",
+      image: "/old/35.jpg",
     },
     {
       question:
@@ -139,7 +139,7 @@ function Anniversary() {
       ],
       correctAnswer: 3,
       questionType: QuestionType["Multiple Choice"],
-      image: "/days/41.jpg",
+      image: "/old/41.jpg",
     },
     {
       question: "Wie heeft er gewonnen met het potje pesten bij de Gouv?",
@@ -180,7 +180,7 @@ function Anniversary() {
       allowedDifference: 1,
       unit: "dagen",
       questionType: QuestionType["Number input"],
-      image: "/days/42.jpg",
+      image: "/old/42.jpg",
     },
     {
       question:
@@ -188,14 +188,14 @@ function Anniversary() {
       answers: ["Blauw", "Rood", "Bruin", "Groen"],
       correctAnswer: 3,
       questionType: QuestionType["Multiple Choice"],
-      image: "/days/38.jpg",
+      image: "/old/38.jpg",
     },
     {
       question: "Hoeveel zwemtrainingen heeft Jeremy tot nu toe gedaan?",
       correctAnswer: 3,
       allowedDifference: 0,
       questionType: QuestionType["Number input"],
-      image: "/days/40.jpg",
+      image: "/old/40.jpg",
     },
     {
       question: "Wat vindt Jeremy het mooiste aan Katinka?",

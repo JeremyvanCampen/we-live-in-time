@@ -80,7 +80,7 @@ function Home() {
             >
               <img
                 className="max-h-96 rounded-lg border-black"
-                src="/days/43.jpg"
+                src="/old/43.jpg"
               />
 
               <span className="absolute left-1/2 -bottom-3 translate-y-full w-full text-center -translate-x-1/2 text-white text-2xl font-medium">
