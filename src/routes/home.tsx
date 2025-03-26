@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Home() {
-  const targetDate = "2025-05-12T06:00:00+01:00"; // Target date in Dutch time (CET/CEST)
+  const targetDate = "2025-05-11T06:00:00+01:00"; // Target date in Dutch time (CET/CEST)
 
   const [remainingTime, setRemainingTime] = useState("");
   const [totalDays, setTotalDays] = useState(0);
