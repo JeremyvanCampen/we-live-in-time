@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "preinstall": "npx npm@latest install --legacy-peer-deps",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
