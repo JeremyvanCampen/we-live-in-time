@@ -72,19 +72,19 @@ function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/25"
+            className="absolute inset-0 bg-black/25 z-10"
           >
             <div
               className="absolute left-1/2 top-1/2  -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition cursor-pointer group"
-              onClick={() => navigate("/anniversary")}
+              onClick={() => navigate("/anniversary-3-months")}
             >
               <img
                 className="max-h-96 rounded-lg border-black"
-                src="/old/43.jpg"
+                src="/anniversary/einruhr.jpg"
               />
 
               <span className="absolute left-1/2 -bottom-3 translate-y-full w-full text-center -translate-x-1/2 text-white text-2xl font-medium">
-                Eerste maand samen
+                Drie maanden samen
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,15 +113,43 @@ function Home() {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex items-center flex-col space-y-8 w-full pt-16 px-2">
-        <h1 className="text-4xl">{remainingTime}</h1>
+      <div className="flex items-center flex-col w-full py-16 px-2">
+        <div className="space-y-8">
+          <h1 className="text-4xl">{remainingTime}</h1>
 
-        <img
-          className="max-h-96 rounded-lg border-black"
-          src={`/days/${totalDays}.jpg`}
-          alt={`Day ${totalDays}`}
-          onClick={handleImageClick}
-        />
+          <img
+            className="max-h-96 rounded-lg border-black"
+            src={`/days/${totalDays}.jpg`}
+            alt={`Day ${totalDays}`}
+            onClick={handleImageClick}
+          />
+        </div>
+
+        <div
+          className="hover:scale-105 mt-auto mr-auto relative transition cursor-pointer group"
+          onClick={() => navigate("/anniversary")}
+        >
+          <img className="max-h-48 rounded-lg border-black" src="/old/43.jpg" />
+
+          <span className="absolute left-1/2 -bottom-3 translate-y-full w-full text-center -translate-x-1/2 text-white text-2xl font-medium">
+            1 maand
+          </span>
+
+          <div className="p-2 right-3 bottom-3 bg-white rounded-full aspect-square absolute flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="size-5 text-black group-hover:-rotate-45 transition"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </>
   );
