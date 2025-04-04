@@ -630,11 +630,11 @@ function AnniversaryThreeMonths() {
             </div>
           </>
         ) : (
-          <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 p-8">
+          <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 p-2 md:p-8">
             {/* Glowing Frame */}
             <div
               className="relative bg-gradient-to-b from-red-600 to-purple-800 rounded-2xl shadow-lg 
-              px-16 py-16 text-center text-white max-w-3xl gap-4 flex flex-col"
+              px-4 py-4 md:px-16 md:py-16 text-center text-white max-w-3xl gap-4 flex flex-col"
             >
               {/* Lampjes */}
               <div
