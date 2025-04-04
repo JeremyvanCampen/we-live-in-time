@@ -407,7 +407,8 @@ function AnniversaryThreeMonths() {
   const [prizes, setPrizes] = useState([
     {
       amountRequired: 1,
-      prize: "Een drankje of snacks naar keuze, helemaal voor jou.",
+      prize:
+        "Vrije keuze voor de volgende serie of film, maar de ander moet wel meekijken — en niet in slaap vallen!",
     },
     {
       amountRequired: 5,
