@@ -307,7 +307,7 @@ function AnniversaryThreeMonths() {
       } else {
         setFinalAnswerGiven(true);
       }
-    }, 0);
+    }, 5000);
   }
 
   function toggleConfettiy() {
