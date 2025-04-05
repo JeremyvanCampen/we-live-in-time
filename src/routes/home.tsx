@@ -114,7 +114,7 @@ function Home() {
         )}
       </AnimatePresence>
       <div className="flex items-center flex-col w-full py-16 px-2 space-y-8">
-        <div className="space-y-8">
+        <div className="space-y-8 flex items-center flex-col">
           <h1 className="text-4xl">{remainingTime}</h1>
 
           <img

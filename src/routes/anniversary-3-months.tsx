@@ -649,7 +649,7 @@ function AnniversaryThreeMonths() {
               <div className="flex flex-col gap-2 text-lg font-medium">
                 <p>
                   We zijn nu officieel <strong>3 maanden</strong> samen! Maar
-                  hoe goed ken je eigenlijk onze momenten samen? Bij deze eerste
+                  hoe goed ken je eigenlijk onze momenten samen? Bij de eerste
                   quiz viel je kennis helaas tegen, dus dit is je kans om dat
                   recht te zetten!
                 </p>
