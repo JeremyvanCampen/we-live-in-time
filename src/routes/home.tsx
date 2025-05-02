@@ -25,7 +25,8 @@ function Home() {
       const diffInSeconds = differenceInSeconds(target, zonedNow);
 
       if (diffInSeconds <= 0) {
-        setRemainingTime("Time's up!");
+        setRemainingTime("0d 0h 0m 0s");
+        setTotalDays(0);
         clearInterval(intervalId);
       } else {
         const totalDays = differenceInDays(target, zonedNow);
