@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #556b2f;
+  background-color: oklch(39.6% 0.141 25.723);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,7 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root{
+#root {
   overflow: hidden;
   min-height: 100vh;
   display: flex;

@@ -9,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Home() {
-  const targetDate = "2025-05-11T06:00:00+01:00"; // Target date in Dutch time (CET/CEST)
+  const targetDate = "2025-06-21T20:00:00+01:00"; // Target date in Dutch time (CET/CEST)
+  // const targetDate = "2025-06-09T18:56:00+01:00"; // Target date in Dutch time (CET/CEST)
 
   const [remainingTime, setRemainingTime] = useState("");
   const [totalDays, setTotalDays] = useState(0);
@@ -27,7 +28,8 @@ function Home() {
       if (diffInSeconds <= 0) {
         setRemainingTime("0d 0h 0m 0s");
         setTotalDays(0);
-        clearInterval(intervalId);
+        navigate("/family-weekend");
+        // clearInterval(intervalId);
       } else {
         const totalDays = differenceInDays(target, zonedNow);
         setTotalDays(totalDays);
@@ -120,15 +122,14 @@ function Home() {
 
           <img
             className="max-h-96 rounded-lg border-black"
-            src={`/days/${totalDays}.jpg`}
-            alt={`Day ${totalDays}`}
+            src={`/family/start.jpg`}
             onClick={handleImageClick}
           />
         </div>
 
-        <div className="flex justify-center w-full space-x-4">
+        <div className="flex justify-start w-full space-x-4">
           <div
-            className="hover:scale-105 mr-auto relative transition cursor-pointer group"
+            className="hover:scale-105  relative transition cursor-pointer group"
             onClick={() => navigate("/anniversary")}
           >
             <img
@@ -138,6 +139,34 @@ function Home() {
 
             <span className="absolute left-1/2 -bottom-3 translate-y-full w-full text-center -translate-x-1/2 text-white text-2xl font-medium">
               1 maand
+            </span>
+
+            <div className="p-2 right-3 bottom-3 bg-white rounded-full aspect-square absolute flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-5 text-black group-hover:-rotate-45 transition"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="hover:scale-105 mr-auto relative transition cursor-pointer group"
+            onClick={() => navigate("/anniversary-3-months")}
+          >
+            <img
+              className="max-h-48 rounded-lg border-black"
+              src="/days/55.jpg"
+            />
+
+            <span className="absolute left-1/2 -bottom-3 translate-y-full w-full text-center -translate-x-1/2 text-white text-2xl font-medium">
+              3 maanden
             </span>
 
             <div className="p-2 right-3 bottom-3 bg-white rounded-full aspect-square absolute flex items-center justify-center">
