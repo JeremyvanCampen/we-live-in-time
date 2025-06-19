@@ -7,6 +7,7 @@ import {
 import { fromZonedTime } from "date-fns-tz";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 
 function Home() {
   const targetDate = "2025-06-21T20:00:00+01:00"; // Target date in Dutch time (CET/CEST)
@@ -17,6 +18,14 @@ function Home() {
   const [tapCount, setTapCount] = useState(0);
   const [showButton, setShowButton] = useState(false);
   const navigate = useNavigate();
+  const introRef = React.createRef();
+
+  // Set the initial volume when the component is mounted
+  useEffect(() => {
+    if (introRef.current) {
+      introRef.current.volume = 0.15; // Set the volume to 50%
+    }
+  }, []); // Empty dependency array to run only once
 
   useEffect(() => {
     const calculateRemainingTime = () => {
@@ -69,6 +78,8 @@ function Home() {
 
   return (
     <>
+      <audio loop autoPlay ref={introRef} src="/anniversary/intro.mp3" />
+
       <AnimatePresence>
         {showButton && (
           <motion.div
@@ -118,16 +129,16 @@ function Home() {
       </AnimatePresence>
       <div className="flex items-center flex-col w-full py-16 px-2 space-y-8">
         <div className="space-y-8 flex items-center flex-col">
-          <h1 className="text-4xl">{remainingTime}</h1>
+          <h1 className="text-4xl 2xl:text-7xl">{remainingTime}</h1>
 
           <img
-            className="max-h-96 rounded-lg border-black"
+            className="max-h-96 2xl:max-h-[450px]  rounded-lg border-black"
             src={`/family/start.jpg`}
             onClick={handleImageClick}
           />
         </div>
 
-        <div className="flex justify-start w-full space-x-4">
+        {/* <div className="flex justify-start w-full space-x-4">
           <div
             className="hover:scale-105  relative transition cursor-pointer group"
             onClick={() => navigate("/anniversary")}
@@ -184,7 +195,7 @@ function Home() {
               </svg>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

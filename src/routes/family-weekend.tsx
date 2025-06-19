@@ -15,13 +15,13 @@ function FamilyWeekend() {
   const [disableDice, setDisableDice] = useState(false);
   const [questions, setQuestions] = useState([
     {
-      question: "Sinds wanneer zijn Jeremy en Katinka officieel samen?",
+      question: "Sinds wanneer zijn we officieel samen?",
       answers: ["31 december", "1 januari", "5 januari", "7 januari"],
       correctAnswer: 2,
       questionType: QuestionType["Multiple Choice"],
     },
     {
-      question: "Wie is op wie afgestapt op het feest",
+      question: "Wie is op wie afgestapt op het nieuwjaarsfeest?",
       answers: [
         "Katinka op Jeremy",
         "Jeremy op Katinka",
@@ -32,13 +32,13 @@ function FamilyWeekend() {
       questionType: QuestionType["Multiple Choice"],
     },
     {
-      question: "Wat waren we van elkaar vergeten na de eerste avond?",
+      question: "Wat waren we van elkaar vergeten tijdens de eerste avond?",
       answers: ["Leeftijd", "Schoenmaat", "Telefoonnummer", "Naam"],
       correctAnswer: 3,
       questionType: QuestionType["Multiple Choice"],
     },
     {
-      question: "Welke film hebben we gezien voor de eerste date?",
+      question: "Naar welke film zijn we gegaan voor de eerste date?",
       answers: [
         "Paddington in Peru",
         "Lilo & Stitch",
@@ -56,7 +56,7 @@ function FamilyWeekend() {
     },
     {
       question:
-        "Hoeveel dagen van de totaal 109 dagen die Katinka in Amerika is geweest hebben we minsten één uur gefacetimed?",
+        "Van de 109 dagen dat Katinka zonder Jeremy in Amerika was dit jaar, hoeveel dagen hebben ze minimaal één uur met elkaar gebeld?",
       allowedDifference: 3,
       correctAnswer: 108,
       unit: "dagen",
@@ -68,13 +68,13 @@ function FamilyWeekend() {
         "Vrijheidsbeeld & toerist",
         "Koempels",
         "Mario & Luigi",
-        "Oreo",
+        "Oreos",
       ],
       correctAnswer: 3,
       questionType: QuestionType["Multiple Choice"],
     },
     {
-      question: "Waar waren op vakantie in Duitsland?",
+      question: "Waar waren we op vakantie in Duitsland?",
       answers: ["Einruhr", "Berlijn", "Keulen", "Gemünd"],
       correctAnswer: 0,
       questionType: QuestionType["Multiple Choice"],
@@ -166,7 +166,7 @@ function FamilyWeekend() {
     },
     {
       question:
-        "Door wie moesten we teruggaan om augurk suikerspin te proberen?",
+        "Door wie moesten we teruggaan om augurk suikerspin te proberen in New York?",
       answers: ["Celine", "Celine", "Celine", "Celine"],
       correctAnswer: 0,
       questionType: QuestionType["Multiple Choice"],
@@ -189,13 +189,13 @@ function FamilyWeekend() {
         "Empire State Building",
         "The Edge",
         "Chrysler Building",
-        "Rockefeller Center",
+        "Top of the Rock",
       ],
       correctAnswer: 3,
       questionType: QuestionType["Multiple Choice"],
     },
     {
-      question: "Welke bloemen kreeg Katinka voor haar graduation van Jeremy?",
+      question: "Welke bloemen kreeg Katinka voor haar afstuderen van Jeremy?",
       answers: ["Rode rozen", "Zonnebloemen", "Veldboeket", "Roze tulpen"],
       correctAnswer: 0,
       questionType: QuestionType["Multiple Choice"],
@@ -215,7 +215,7 @@ function FamilyWeekend() {
       questionType: QuestionType["Multiple Choice"],
     },
     {
-      question: "Hoe lang zijn wij samen in centimeters?",
+      question: "Wat is onze gezamenlijke lengte in centimeters?",
       correctAnswer: 369,
       allowedDifference: 5,
       unit: "cm",
@@ -282,7 +282,7 @@ function FamilyWeekend() {
   // Set the initial volume when the component is mounted
   useEffect(() => {
     if (musicRef.current) {
-      musicRef.current.volume = 0.1; // Set the volume to 50%
+      musicRef.current.volume = 0.15; // Set the volume to 50%
     }
 
     if (quizRef.current) {
@@ -574,6 +574,7 @@ function FamilyWeekend() {
       <audio ref={audioWrongRef} src="/anniversary/wrong.mp3" />
       <audio loop ref={musicRef} src="/anniversary/music.mp3" />
       <audio loop autoPlay ref={quizRef} src="/anniversary/quiz.mp3" />
+      
 
       <div className="flex py-8 md:py-0 flex-col md:flex-row space-y-8 md:space-x-8 md:space-y-0 md:px-32 items-center justify-center flex-1 bg-[oklch(39.6% 0.141 25.723)] relative">
         <svg
