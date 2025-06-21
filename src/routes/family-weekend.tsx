@@ -13,6 +13,17 @@ enum QuestionType {
 function FamilyWeekend() {
   const [winners, setWinners] = useState([]);
   const [disableDice, setDisableDice] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(true);
+
+  // Timer to remove blur after 1 minute
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsBlurred(false);
+    }, 60000); // 60 seconds = 1 minute
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const [questions, setQuestions] = useState([
     {
       question: "Sinds wanneer zijn we officieel samen?",
@@ -576,7 +587,7 @@ function FamilyWeekend() {
       <audio loop autoPlay ref={quizRef} src="/anniversary/quiz.mp3" />
       
 
-      <div className="flex py-8 md:py-0 flex-col md:flex-row space-y-8 md:space-x-8 md:space-y-0 md:px-32 items-center justify-center flex-1 bg-[oklch(39.6% 0.141 25.723)] relative">
+      <div className={`flex py-8 md:py-0 flex-col md:flex-row space-y-8 md:space-x-8 md:space-y-0 md:px-32 items-center justify-center flex-1 bg-[oklch(39.6% 0.141 25.723)] relative transition-all duration-500 ${isBlurred ? 'blur-lg' : ''}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 15 15"
