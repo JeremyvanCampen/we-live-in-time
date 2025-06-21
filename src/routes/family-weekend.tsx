@@ -503,13 +503,13 @@ function FamilyWeekend() {
                 &nbsp;hebben gewonnen!
               </h1>
             )}
-            {currentPrize}
+            <span className="text-2xl my-4 font-bold">{currentPrize}</span>
 
             {!winners[
               prizes.findIndex((prize) => prize.prize === currentPrize)
             ] && (
               <Dice
-                size={200}
+                size={300}
                 rollingTime={3000}
                 disabled={
                   winners[
@@ -585,9 +585,12 @@ function FamilyWeekend() {
       <audio ref={audioWrongRef} src="/anniversary/wrong.mp3" />
       <audio loop ref={musicRef} src="/anniversary/music.mp3" />
       <audio loop autoPlay ref={quizRef} src="/anniversary/quiz.mp3" />
-      
 
-      <div className={`flex py-8 md:py-0 flex-col md:flex-row space-y-8 md:space-x-8 md:space-y-0 md:px-32 items-center justify-center flex-1 bg-[oklch(39.6% 0.141 25.723)] relative transition-all duration-500 ${isBlurred ? 'blur-lg' : ''}`}>
+      <div
+        className={`flex py-8 md:py-0 flex-col md:flex-row space-y-8 md:space-x-8 md:space-y-0 md:px-32 items-center justify-center flex-1 bg-[oklch(39.6% 0.141 25.723)] relative transition-all duration-500 ${
+          isBlurred ? "blur-lg" : ""
+        }`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 15 15"

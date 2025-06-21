@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
 function Home() {
-  const targetDate = "2025-06-21T18:00:00+01:00"; // Target date in Dutch time (CET/CEST)
+  const targetDate = "2025-06-21T18:30:00+01:00"; // Target date in Dutch time (CET/CEST)
   // const targetDate = "2025-06-09T18:56:00+01:00"; // Target date in Dutch time (CET/CEST)
 
   const [remainingTime, setRemainingTime] = useState("");
@@ -127,12 +127,12 @@ function Home() {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex items-center flex-col w-full py-16 px-2 space-y-8">
+      <div className="flex items-center justify-center min-h-screen w-full px-2">
         <div className="space-y-8 flex items-center flex-col">
-          <h1 className="text-4xl 2xl:text-7xl">{remainingTime}</h1>
+          <h1 className="text-4xl 2xl:text-7xl text-center">{remainingTime}</h1>
 
           <img
-            className="max-h-96 2xl:max-h-[450px]  rounded-lg border-black"
+            className="max-h-96 2xl:max-h-[450px] rounded-lg border-black"
             src={`/family/start.jpg`}
             onClick={handleImageClick}
           />
