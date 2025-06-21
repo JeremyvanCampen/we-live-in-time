@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
 function Home() {
-  const targetDate = "2025-06-21T18:30:00+01:00"; // Target date in Dutch time (CET/CEST)
+  const targetDate = "2025-06-21T19:00:00+01:00"; // Target date in Dutch time (CET/CEST)
   // const targetDate = "2025-06-09T18:56:00+01:00"; // Target date in Dutch time (CET/CEST)
 
   const [remainingTime, setRemainingTime] = useState("");
